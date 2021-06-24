@@ -13,9 +13,9 @@ const getPhotoMessages = function(){
 
 const getComments = function(id) {
   const array = [];
-  for(let jj = 0; jj < id; jj++){
-    array[jj] = {
-      id: jj+1,
+  for(let j = 0; j < id; j++){
+    array[j] = {
+      id: j+1,
       avatar: getRandomAvatar(),
       message: getPhotoMessages(),
       name: getRandomArrayElement(arrayNames),
@@ -26,10 +26,10 @@ const getComments = function(id) {
 
 const getArrayPhotos = function(id){
   const array = [];
-  for(let ii = 0; ii < id; ii++){
-    array[ii] = {
-      id: ii+1,
-      url: `photos/'${ii+1}.jpg`,
+  for(let i = 0; i < id; i++){
+    array[i] = {
+      id: i+1,
+      url: `photos/'${i+1}.jpg`,
       description: 'Крутое необычное изящное фото',
       likes: randomNumber(MIN_LIKES, MAX_LIKES),
       comments: getComments(COMMENT_COUNT),
