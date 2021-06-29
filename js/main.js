@@ -1,4 +1,4 @@
-import {getArrayPhotos} from '../js/create-array-photos.js';
+import {picturesContainer} from '../js/create-thumbnails.js';
 
-const COUNT_PHOTOS = 25;
-console.log(getArrayPhotos(COUNT_PHOTOS));
+
+console.log(picturesContainer);

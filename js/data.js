@@ -1,3 +1,4 @@
+const COUNT_PHOTOS = 25;
 const MIN_LIKES = 15;
 const MAX_LIKES = 200;
 const MIN_NUMBER_AVATAR = 1;
@@ -18,4 +19,4 @@ const arrayNames = [
   'Барсик',
 ];
 
-export {MIN_LIKES, MAX_LIKES, MIN_NUMBER_AVATAR, MAX_NUMBER_AVATAR, COMMENT_COUNT, arrayMessage, arrayNames};
+export {COUNT_PHOTOS, MIN_LIKES, MAX_LIKES, MIN_NUMBER_AVATAR, MAX_NUMBER_AVATAR, COMMENT_COUNT, arrayMessage, arrayNames};

@@ -1,5 +1,5 @@
 import {randomNumber} from '../js/utils.js';
-import {MIN_LIKES, MAX_LIKES, MIN_NUMBER_AVATAR, MAX_NUMBER_AVATAR, COMMENT_COUNT, arrayMessage, arrayNames} from '../js/data.js';
+import {COUNT_PHOTOS, MIN_LIKES, MAX_LIKES, MIN_NUMBER_AVATAR, MAX_NUMBER_AVATAR, COMMENT_COUNT, arrayMessage, arrayNames} from '../js/data.js';
 
 const getRandomArrayElement = (elements) => elements[randomNumber(0, elements.length - 1)];
 const getRandomAvatar = () => `img/avatar-${ randomNumber(MIN_NUMBER_AVATAR, MAX_NUMBER_AVATAR)}.svg`;
@@ -29,7 +29,7 @@ const getArrayPhotos = function(id){
   for(let i = 0; i < id; i++){
     array[i] = {
       id: i+1,
-      url: `photos/'${i+1}.jpg`,
+      url: `photos/${i+1}.jpg`,
       description: 'Крутое необычное изящное фото',
       likes: randomNumber(MIN_LIKES, MAX_LIKES),
       comments: getComments(COMMENT_COUNT),
@@ -38,4 +38,5 @@ const getArrayPhotos = function(id){
   return array;
 };
 
-export {getArrayPhotos};
+const arrayPhotos = getArrayPhotos(COUNT_PHOTOS);
+export {arrayPhotos};
