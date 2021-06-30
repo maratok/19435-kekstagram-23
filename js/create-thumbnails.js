@@ -15,4 +15,5 @@ arrayPhotos.forEach((photo) => {
 
 picturesContainer.appendChild(photoFragment);
 
+console.log(picturesContainer);
 export {picturesContainer};
