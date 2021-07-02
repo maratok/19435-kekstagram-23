@@ -1,4 +1,2 @@
-import {picturesContainer} from '../js/create-thumbnails.js';
+import {picturesContainer} from './create-thumbnails.js';
 
-
-console.log(picturesContainer);

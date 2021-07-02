@@ -3,7 +3,7 @@ const MIN_LIKES = 15;
 const MAX_LIKES = 200;
 const MIN_NUMBER_AVATAR = 1;
 const MAX_NUMBER_AVATAR = 6;
-const COMMENT_COUNT = 5;
+const COMMENT_COUNT = 19;
 const arrayMessage = [
   'Всё отлично!',
   'В целом всё неплохо. Но не всё.',
