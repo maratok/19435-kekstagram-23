@@ -1,4 +1,5 @@
 import {arrayPhotos} from '../js/create-array-photos.js';
+import {isEscEvent} from '../js/utils.js';
 
 const picturesContainer = document.querySelector('.pictures');
 const pictureTemplate = document.querySelector('#picture').content.querySelector('.picture');
@@ -69,7 +70,7 @@ arrayPhotos.forEach((photo) => {
     });
     //Обрабочтик на клик кнопки Esc во время открытой большой картинки
     document.addEventListener('keydown', (evt) => {
-      if (evt.key === 'Escape' || evt.key === 'Esc') {
+      if (isEscEvent(evt)) {
         evt.preventDefault();
         body.classList.remove('modal-open');
         bigPicture.classList.add('hidden');

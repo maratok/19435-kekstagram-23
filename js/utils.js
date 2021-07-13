@@ -17,4 +17,7 @@ const countLetters = function(strick, maxLetters){
   }
 };
 
-export {randomNumber, countLetters};
+const isEscEvent = (evt) =>  evt.key === 'Escape' || evt.key === 'Esc';
+
+
+export {randomNumber, countLetters, isEscEvent};
