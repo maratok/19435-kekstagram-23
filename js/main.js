@@ -1,2 +1,2 @@
-import {picturesContainer} from './create-thumbnails.js';
-
+import {} from './create-thumbnails.js';
+import {} from './form.js';
