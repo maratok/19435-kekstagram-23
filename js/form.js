@@ -1,4 +1,4 @@
-import {isEscEvent, countLetters} from './utils.js';
+import {isEscEvent, countLetters} from '../js/utils.js';
 
 const body = document.querySelector('body');
 const form = document.querySelector('.img-upload__form');
@@ -75,5 +75,3 @@ form.hashtags.addEventListener('keydown', (evt)=> evt.stopPropagation());
 form.description.addEventListener('keydown', (evt)=> evt.stopPropagation());
 
 submitButton.addEventListener('click', checkHashTags);
-
-

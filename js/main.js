@@ -1,2 +1,2 @@
-import {} from './create-thumbnails.js';
-import {} from './form.js';
+import {} from '../js/create-thumbnails.js';
+import {} from '../js/form.js';
