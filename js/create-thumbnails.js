@@ -18,7 +18,7 @@ arrayPhotos.forEach((photo) => {
   photoFragment.appendChild(pictureElement);
 
   //Функции открытия большой картинки
-  const showBigPicture = () => {
+  const bigPictureShowHandler = () => {
     body.classList.add('modal-open');
     bigPicture.classList.remove('hidden');
     const commentsLength = photo.comments.length;
@@ -73,7 +73,7 @@ arrayPhotos.forEach((photo) => {
       pictureCommentCount.insertAdjacentHTML('afterbegin', `${countShowCommentsNow} из <span class="comments-count">${allComments}</span> комментариев`);
     };
 
-    const loadComments = () => {
+    const commentsLoadHandler = () => {
       commentsLoaderButton.classList.remove('hidden');
       countShowComments += 5;
       if(countShowComments > commentsLength){
@@ -91,13 +91,13 @@ arrayPhotos.forEach((photo) => {
     showComments(countShowComments);
     showCountComments(commentsLength);
 
-    commentsLoaderButton.addEventListener('click', loadComments);
+    commentsLoaderButton.addEventListener('click', commentsLoadHandler);
 
     const hidePopup = () => {
       body.classList.remove('modal-open');
       bigPicture.classList.add('hidden');
       bigPictureComments.innerHTML = '';
-      commentsLoaderButton.removeEventListener('click', loadComments);
+      commentsLoaderButton.removeEventListener('click', commentsLoadHandler);
     };
 
     const buttonClickHandler = (evt) => {
@@ -116,7 +116,7 @@ arrayPhotos.forEach((photo) => {
     document.addEventListener('keydown', buttonKeydownHandler);
   };
   //Обработчик на открытие большой картинки
-  pictureElement.addEventListener('click', showBigPicture);
+  pictureElement.addEventListener('click', bigPictureShowHandler);
 });
 
 picturesContainer.appendChild(photoFragment);
