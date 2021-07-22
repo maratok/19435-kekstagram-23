@@ -73,9 +73,6 @@ arrayPhotos.forEach((photo) => {
       pictureCommentCount.insertAdjacentHTML('afterbegin', `${countShowCommentsNow} из <span class="comments-count">${allComments}</span> комментариев`);
     };
 
-    showComments(countShowComments);
-    showCountComments(commentsLength);
-
     const loadComments = () => {
       commentsLoaderButton.classList.remove('hidden');
       countShowComments += 5;
@@ -90,6 +87,9 @@ arrayPhotos.forEach((photo) => {
         showCountComments(commentsLength);
       }
     };
+
+    showComments(countShowComments);
+    showCountComments(commentsLength);
 
     commentsLoaderButton.addEventListener('click', loadComments);
 
@@ -108,6 +108,7 @@ arrayPhotos.forEach((photo) => {
       if (isEscEvent(evt)) {
         evt.preventDefault();
         hidePopup();
+        document.removeEventListener('keydown', buttonKeydownHandler);
       }
     };
 
